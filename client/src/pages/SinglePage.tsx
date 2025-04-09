@@ -13,16 +13,16 @@ function SinglePage() {
 
   useEffect(() => {
     fetch(`${process.env.API_URL}/items/${id}`)
-      .then(res => res.json())
-      .then(data => setItem(data))
-      .catch(err => {
+      .then((res) => res.json())
+      .then((data) => setItem(data))
+      .catch((err) => {
         console.error('Failed to fetch item', err);
       });
   }, []);
 
   return (
     <div className="detail">
-        <Link to={'/'}>Go Back</Link>
+      <Link to={'/'}>Go Back</Link>
       <h2>Item Details</h2>
       <p>ID: {item!.id}</p>
       <p>Name: {item!.name}</p>
