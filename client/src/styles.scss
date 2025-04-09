@@ -238,6 +238,7 @@ li {
 .list-item__description {
   text-overflow: ellipsis;
   white-space: nowrap;
+  overflow: hidden;
 }
 
 .list-item-actions {
