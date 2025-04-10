@@ -4,15 +4,17 @@ function useSort(items: any[]): [any[], any, any] {
   const [sortBy, setSortBy] = useState('ASC');
 
   const sortedItems = useMemo(() => {
+    const copyOfItems = [...items];
+
     if (sortBy === 'DESC') {
-      return items.sort((a, b) => a.id - b.id);
+      return copyOfItems.sort((a, b) => a.id - b.id);
     }
 
     if (sortBy === 'ASC') {
-      return items.sort((a, b) => b.id - a.id);
+      return copyOfItems.sort((a, b) => b.id - a.id);
     }
 
-    return items;
+    return copyOfItems;
   }, [items, sortBy]);
 
   const handleSortClick = () => {
