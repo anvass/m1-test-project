@@ -35,7 +35,7 @@ function ListPage() {
   useEffect(() => {
     if (query.length > 0) {
       setFilteredItems(
-        filteredItems.filter((item) =>
+        items.filter((item) =>
           `${item.id}`.includes(
             query
               .toLowerCase()
@@ -46,7 +46,7 @@ function ListPage() {
         )
       );
     }
-  }, [query, filteredItems]);
+  }, [query]);
 
   return (
     <div className={'list-wrapper'}>
