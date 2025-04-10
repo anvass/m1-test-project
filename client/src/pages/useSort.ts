@@ -5,7 +5,7 @@ function useSort(items: any[]): [any[], any, any] {
 
   const sortedItems = useMemo(() => {
     if (sortBy === 'DESC') {
-      return items;
+      return items.sort((a, b) => a.id - b.id);
     }
 
     if (sortBy === 'ASC') {
