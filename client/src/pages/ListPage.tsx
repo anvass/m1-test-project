@@ -17,7 +17,7 @@ function ListPage() {
 
   const activeItemText = useMemo(
     () => (activeItemId ? activeItemId : 'Empty'),
-    []
+    [activeItemId]
   );
 
   const handleItemClick = (id: any) => {
