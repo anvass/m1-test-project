@@ -7,6 +7,9 @@
 5. Одна из проблем с кнопкой установки активного элемента: при клике на кнопку срабатывал переход на страницу `/:id`. Решила с помощью `e.preventDefault()`. [Решение](https://github.com/anvass/m1-test-project/commit/68486396d5e2394bd7a729e6238d3d3ae55b7a9f). Верстка невалидная, элемент `button` не должен быть потомком в теге `a`.
 6. Вторая проблема с кнопкой установки активного элемента: не менялся текст в `activeItemText`, всегда стоял `Empty`. Для решения проблемы добавила зависимость от activeItemId в useMemo. [Решение](https://github.com/anvass/m1-test-project/commit/7606624b9f4a9937a528e1611a5b9691c3f8c10a).
 7. Выходящий за границы текст в блоках `.list-item__description`. Не хватало CSS-свойства `overflow` для блока. [Решение](https://github.com/anvass/m1-test-project/commit/2c2a8639bd9d989aa62f01d6d8429fb2563418ac).
+8. Исправление работы хука, содержащего вызов setInterval. [Решение](https://github.com/anvass/m1-test-project/commit/02fd0f5b13b788839dd0889020d69069d3ade946).
+
+Весь список исправлений можно изучить в списке [commit](https://github.com/anvass/m1-test-project/commits/master/) проекта.
 
 ## Что можно добавить или улучшить
 
